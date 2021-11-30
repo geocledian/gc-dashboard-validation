@@ -128,10 +128,10 @@
                   </gc-list>
                 </div>
 
-             <div class="column is-one-quarter" id="rightColumn" style=" text-align:center; padding-bottom: 0em; padding: 0.5em;">
-                <div>
-                  <h1 class="title gc-options-title gc-is-primary is-size-5" id="menuSummary">Summary</h1> 
-                  
+             <div class="column is-one-quarter" id="rightColumn" style=" padding-bottom: 0em; padding: 0.5em;">
+                <div class="has-text-centered">
+                  <p class="title gc-options-title gc-is-primary is-size-5" id="menuSummary">Summary</p> 
+
                   <div class="tile is-ancestor">
                     <div class="tile is-vertical">
                       <div class="p-2">
@@ -157,21 +157,21 @@
                     </div>
                   </div>
 
-                   <!-- <span class="label is-normal gc-is-tertiary"> True: {{truecount}} </span>               -->
-                   <!-- <span class="label is-normal gc-is-tertiary"> False: {{falsecount}} </span>                 -->
-                   <!-- <span class="label is-normal gc-is-tertiary"> Error: {{errorcount}} </span> -->
+                    <!-- <span class="label is-normal gc-is-tertiary"> True: {{truecount}} </span>               -->
+                    <!-- <span class="label is-normal gc-is-tertiary"> False: {{falsecount}} </span>                 -->
+                    <!-- <span class="label is-normal gc-is-tertiary"> Error: {{errorcount}} </span> -->
 
-                   <!-- <hr style="background-color: rgb(179, 176, 176);"/> -->
-                   
-                   <!-- <span class="label is-small gc-is-tertiary" id="truepercent"> True % :  </span>                  
-                   <span class="label is-small gc-is-tertiary" id="falsepercent"> False %:  </span>                 
-                   <span class="label is-small gc-is-tertiary"  id="errorpercent"> Error %:  </span> -->
+                    <!-- <hr style="background-color: rgb(179, 176, 176);"/> -->
+                    
+                    <!-- <span class="label is-small gc-is-tertiary" id="truepercent"> True % :  </span>                  
+                    <span class="label is-small gc-is-tertiary" id="falsepercent"> False %:  </span>                 
+                    <span class="label is-small gc-is-tertiary"  id="errorpercent"> Error %:  </span> -->
 
-                   <!-- <hr style="background-color: rgb(179, 176, 176);"/> -->
+                    <!-- <hr style="background-color: rgb(179, 176, 176);"/> -->
                 
-                   <!-- <h1 class="title gc-is-primary" style="font-size:15px;"></h1> -->
+                    <!-- <h1 class="title gc-is-primary" style="font-size:15px;"></h1> -->
 
-                   <div class="chartSpinner spinner" v-show="this.isloading == true">
+                    <div class="chartSpinner spinner" v-show="this.isloading == true">
                     <div class="rect1"></div>
                     <div class="rect2"></div>
                     <div class="rect3"></div>
@@ -184,7 +184,30 @@
                   </div>
 
                 </div>
-              </div>              
+                
+                <p class="title gc-options-title gc-is-primary is-size-5 has-text-centered" id="menuRules" style="padding-top: 1em;">Validation Rules</p> 
+                <ul class="is-flex">
+                  <li>                
+                    <div class="gc-field">
+                      <label class="label is-small gc-is-tertiary">{{this.$t('rules.homogeneity')}}</label>
+                      <div class="control">
+                        <input type="checkbox" class="content" checked disabled>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- <li>                
+                    <div class="gc-field">
+                      <label class="label is-small gc-is-tertiary">Homogeneity</label>
+                      <div class="control">
+                        <input type="checkbox" class="content" checked disabled>
+                      </div>
+                    </div>
+                  </li> -->
+                </ul>
+
+                
+
+              </div> <!-- column-->             
             </div> <!-- outer-split-container -->
         </div>
 
@@ -223,6 +246,7 @@
         "fields": "Fields",
         "analytics": "Analytics",
         "summary": "Summary",
+        "rules": "Validation Rules"
       },
       "footer": {
         "allRightsReserved" : "All rights reserved",
@@ -252,6 +276,7 @@
         "fields": "Felder",
         "analytics": "Analyse",
         "summary": "Zusammenfassung",
+        "rules": "Validierungsregeln"
       },
       "footer": {
         "allRightsReserved" : "Alle Rechte vorbehalten",

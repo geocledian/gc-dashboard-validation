@@ -17,12 +17,18 @@ var gcLocales = { en: {
   "total": "Total parcels",
   "valid": "valid",
   "invalid": "invalid",
-  "error": "error"
+  "error": "error",
+  "rules": {
+    "homogeneity": "Homogeneity"
+  },
 }, de: {
   "total": "Anzahl Felder",
   "valid": "gültig",
   "invalid": "ungültig",
-  "error": "fehlerhaft"
+  "error": "fehlerhaft",
+  "rules": {
+    "homogeneity": "Homogenität"
+  },
 } };
 
 // global i18n object
@@ -566,7 +572,7 @@ function initComponent() {
 
           // document.getElementById("menuUtilities").innerHTML = i18n.t("indexLocales.headings.utilities");
           document.getElementById("menuSearch").innerHTML = i18n.t("indexLocales.headings.filter");
-          // document.getElementById("menuDetails").innerHTML = i18n.t("indexLocales.headings.details");
+          document.getElementById("menuRules").innerHTML = i18n.t("indexLocales.headings.rules");
           document.getElementById("menuSummary").innerHTML = i18n.t("indexLocales.headings.summary");
           // document.getElementById("menuFields").innerHTML = i18n.t("indexLocales.headings.fields");
           document.getElementById("menuAnalytics").innerHTML = i18n.t("indexLocales.headings.analytics");
