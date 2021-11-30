@@ -159,7 +159,8 @@ function initComponent() {
         offset: 0,
         language: "en",
         listActive: true,
-        isloading: false // for showing / hiding spinner
+        isloading: false, // for showing / hiding spinner
+        apiSecure: true // HTTPS or HTTP requests
       },
       i18n: i18n,
       created() {
