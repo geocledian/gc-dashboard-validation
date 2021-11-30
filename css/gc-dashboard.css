@@ -1,0 +1,146 @@
+/*
+ Geocledian dashboard css
+ 
+  main css - imports all dependent css definitions
+
+ created:     2021-10-11, jsommer
+ last update: 2021-11-30, jsommer
+ version:     0.1.0
+
+*/
+
+/* also imports font awesome, bulma and geocledian styles */
+@import '../../gc-styles/gc-style.css';
+@import '../../gc-filter/css/gc-filter.css';
+@import '../../gc-chart/css/billboard.min.css';
+@import 'gc-validation-list.css';
+
+/* footer */
+#footer {
+    margin-top: 20px;
+}
+
+#footer a {
+    color: #EF7D00 !important;
+    text-decoration: none !important;
+}
+
+/* split.js config */
+.gutter {
+    /* background-color: #eee; */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin-top: 170px;
+    margin-bottom: 170px;
+}
+
+.gutter.gutter-vertical {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+    cursor: row-resize;
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    cursor: col-resize;
+}
+.outer-split-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.split {
+    width:100%;
+    height:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+.is-disabled{
+    pointer-events: none;
+    opacity: .65;
+}
+
+/* override padding from gc-filter.css */
+.gc-filter-field {
+    padding: 0.25em;
+}
+
+.chartSpinner {
+    position: relative;
+    z-index: 1100;
+    top: 20%;
+    left: 10px;
+}
+
+.chartSpinner>div {
+    background-color: #EF7D00 !important;
+}
+
+/* spinner */
+.spinner {
+    margin: 100px auto;
+    width: 90px;
+    height: 60px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.spinner>div {
+    background-color: #333;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+
+    0%,
+    40%,
+    100% {
+        -webkit-transform: scaleY(0.4)
+    }
+
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes sk-stretchdelay {
+
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
