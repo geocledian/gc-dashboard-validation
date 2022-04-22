@@ -4,8 +4,8 @@
  init script
  
  created: 2021-10-20, pal
- updated: 2021-11-30, jsommer
- version: 0.5.0
+ updated: 2022-04-22, jsommer
+ version: 0.5.1
 */
 
 // root Vue instance
@@ -174,7 +174,9 @@ function initComponent() {
         this.selectedParcelId = this.gcParcelId;
         i18n.locale = this.language;
         //i18n for index page
-        this.setLocaleForIndexPage();        
+        this.setLocaleForIndexPage();   
+        //adds the query parameters of the current app to the link of each other app 
+        this.addQueryParamsForNewApp();
       },
       mounted: function () {
         console.debug("root mounted!");
@@ -576,6 +578,18 @@ function initComponent() {
           document.getElementById("menuSummary").innerHTML = i18n.t("indexLocales.headings.summary");
           // document.getElementById("menuFields").innerHTML = i18n.t("indexLocales.headings.fields");
           document.getElementById("menuAnalytics").innerHTML = i18n.t("indexLocales.headings.analytics");
+        },
+        addQueryParamsForNewApp() {
+          /* adds the query parameters of the current app to the link of each other app */
+          let queryParams = window.location.search.substring(1);
+          console.debug("QUERY PARAMS: " + queryParams);
+
+          document.getElementById("navbarCropPerformance").href += "?" + queryParams;
+          document.getElementById("navbarPortfolio").href += "?" + queryParams;
+          document.getElementById("navbarZones").href += "?" + queryParams;
+          document.getElementById("navbarHarvest").href += "?" + queryParams;
+          document.getElementById("navbarAnalyst").href += "?" + queryParams;
+
         }
       }
     });
