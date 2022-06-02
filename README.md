@@ -7,7 +7,7 @@ It is composed of various [Vue.js](https://www.vuejs.org) components from geocle
 With this application you have a dashboard for data validation at hand.
 
 ## Support
-Please contact [us](mailto:info@geocledian.com) from geocledian.com if you have troubles using the application!
+The application is provided as is and we accept no liability for the source code. In case of bugs or questions please contact us at [us](mailto:info@geocledian.com). We are also happy to receive feedback. Unfortunately we can only offer very limited technical support, especially about integration in third party software.
 
 ## Used Libraries
 - [Vue.js](https://www.vuejs.org)
